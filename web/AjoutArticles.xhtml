@@ -26,7 +26,7 @@
             </ui:define>
 
             <ui:define name="right">
-                right
+                <h1 align="center">Nos services</h1>
             </ui:define>
 
             <ui:define name="content">
@@ -50,7 +50,7 @@
                             <h:inputText value="#{bean_article.arti.prixUnitaire}" class="form-control"></h:inputText>
                         </h:panelGrid>
                         <h:panelGrid columns="8">
-                            <h:commandButton value="Ajouter" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton><h:commandButton value="Effacer" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton><h:commandButton value="Modifier" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton><h:commandButton value="Anuler" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton>
+                            <h:commandButton value="Ajouter" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton><h:commandButton value="Effacer" action="#{bean_article.supprimer()}" class="form-control"></h:commandButton><h:commandButton value="Modifier" action="#{bean_article.modifier()}" class="form-control"></h:commandButton><h:commandButton value="Anuler" action="#{bean_article.ajoutArticle()}" class="form-control"></h:commandButton>
                         </h:panelGrid>
                         <h:inputText value="#{bean_article.msg}" class="form-control"></h:inputText>
                     </h:form>
@@ -91,14 +91,6 @@
                                     <h:outputText value="PrixUnitaire"/>
                                 </f:facet>
                                 <h:outputText value="#{item.prixUnitaire}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Date"/>
-                                </f:facet>
-                                <h:outputText value="#{item.date}">
-                                    <f:convertDateTime pattern="MM/dd/yyyy" />
-                                </h:outputText>
                             </h:column>
                         </h:dataTable>
                     </h:form>

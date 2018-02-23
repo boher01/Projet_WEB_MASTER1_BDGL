@@ -28,6 +28,17 @@ public class Bean_article {
         em.create(arti);
         this.msg="Ajouter Effectuer avec succès...";
     }
+    public void rechercher(String code){
+        
+    }
+    public void supprimer(){
+        em.remove(arti);
+        this.msg="Supprimer avec succès...";
+    }
+    public void modifier(){
+        em.edit(arti);
+        this.msg="Modification réussi...";
+    }
     public ArticlesFacadeLocal getEm() {
         return em;
     }

@@ -33,11 +33,24 @@ public class Bean_client {
     public List<Clients> afficheClient(){
         return em.findAll();
     }
+       public void rechercher(String code){
+          cli= new Clients(em.find(em));
+        
+    }
     public void ajoutClient(){
         initialliserDateInscription();
         em.create(cli);
         this.msg="Ajouter Effectuer avec succès...";
     
+    }
+    public void supprimer(){
+        em.remove(cli);
+        this.msg="Supprimer avec succès...";
+    }
+    public void modifier(){
+        initialliserDateInscription();
+        em.edit(cli);
+        this.msg="Modification réussi...";
     }
     private void initialliserDateInscription(){
         Date date = new Date( System.currentTimeMillis());

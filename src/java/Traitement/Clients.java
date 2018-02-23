@@ -6,6 +6,7 @@
 package Traitement;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.sql.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -185,7 +186,11 @@ public class Clients implements Serializable {
     public void setCarteFidele(Boolean carteFidele) {
         this.carteFidele = carteFidele;
     }
-
+    public void Clients (Clients t){
+        this.code=t.code;
+        this.nom=t.nom;
+        this.prenom=t.prenom;
+    }
     @Override
     public int hashCode() {
         int hash = 0;
